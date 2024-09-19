@@ -5,12 +5,12 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class sendThread extends  Thread{ //Thread 상속
+public class SendThread extends  Thread{ //Thread 상속
 
     private final Socket socket;
     private Scanner sc = new Scanner(System.in);
 
-    public sendThread(Socket socket) {
+    public SendThread(Socket socket) {
         this.socket = socket;
     } //socket 생성자
 
