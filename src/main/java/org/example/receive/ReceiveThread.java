@@ -21,7 +21,7 @@ public class ReceiveThread extends Thread{ //Thread 상속
             String receiveData; //수신한 데이터
             while (true) {
                 receiveData = receiver.readUTF(); //UTF-8 형식으로 코딩된 문자열을 읽음
-                System.out.println("클라이언트" + receiveData); //받은 메시지 출력
+                System.out.println("[Client]" + receiveData); //받은 메시지 출력
             }
         } catch (IOException e) {
             throw new RuntimeException(e); //socket.getInputStream에 대한 예외 처리

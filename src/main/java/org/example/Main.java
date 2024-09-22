@@ -14,7 +14,7 @@ public class Main {
         ServerSocket serverSocket = new ServerSocket(port); //port를 지정해 socket과 binding
         while (true) {
             Socket socket = serverSocket.accept(); //client와 연결 생성
-            System.out.println("ip : " + socket.getInetAddress() + "와 연결되었습니다."); //연결 시 메시지 출력
+            System.out.println("[Connection] ip : " + socket.getInetAddress()); //연결 시 메시지 출력
 
             ReceiveThread receiveThread = new ReceiveThread(socket); //송신 스레드 생성
             receiveThread.start(); //송신 스레드 실행
